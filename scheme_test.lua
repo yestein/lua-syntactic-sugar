@@ -1,46 +1,15 @@
 --=======================================================================
--- File Name    : sim_scheme.lua
+-- File Name    : scheme_test
 -- Creator      : yestein(yestein86@gmail.com)
--- Date         : Mon Nov 23 14:04:11 2015
--- Description  : a syntactic sugar to simulate scheme
+-- Date         : Mon Nov 23 14:12:32 2015
+-- Description  : test scheme examples
 -- Modify       :
 --=======================================================================
+local scheme = require("sim_scheme")
 
-local function car(element)
-    if type(element) ~= "table" then
-        return element
-    end
-    return element[1]
+for k, v in pairs(scheme) do
+    _ENV[k] = v
 end
-
-local function cdr(element)
-    if type(element) ~= "table" then
-        return nil
-    end
-    return element[2]
-end
-
-local function cons(element_a, element_b)
-    return {element_a, element_b}
-end
-
-local function dump(element)
-    if type(element) ~= "table" then
-        return tostring(element)
-    end
-    local result_str = "("
-    local function _dump(v)
-        if not v then
-            result_str = result_str .. ")"
-            return result_str
-        end
-        result_str = result_str .. dump(car(v)) .. ", "
-        return _dump(cdr(v))
-    end
-    return _dump(element)
-end
-
-
 
 local function accumulate(op, first_value, element)
     if not element then
@@ -98,8 +67,6 @@ local function map(tb, op)
     end
     return cons(op(car(tb)), map(cdr(tb), op))
 end
-
-print(dump(cons(cons(cons(11,23),cons(10, 11)), cons(3,4))))
 
 print("raw list")
 print(dump(enumlate(6)))
