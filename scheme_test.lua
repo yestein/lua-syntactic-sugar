@@ -5,11 +5,11 @@
 -- Description  : test scheme examples
 -- Modify       :
 --=======================================================================
+local lib = require("lua_lib")
 local scheme = require("sim_scheme")
 
-for k, v in pairs(scheme) do
-    _ENV[k] = v
-end
+load_lib(_ENV, lib)
+load_lib(_ENV, scheme)
 
 local function accumulate(op, first_value, element)
     if not element then

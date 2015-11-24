@@ -1,0 +1,1399 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"frame",
+				"frame_user"
+			],
+			[
+				"fram",
+				"frame_user"
+			],
+			[
+				"framei",
+				"frame_info_display"
+			],
+			[
+				"frame_info",
+				"frame_info_display_photo"
+			],
+			[
+				"frame_ino",
+				"frame_info_display_app_list"
+			],
+			[
+				"pho",
+				"photo_count"
+			],
+			[
+				"show",
+				"showwarning"
+			],
+			[
+				"ind",
+				"index_list"
+			],
+			[
+				"select",
+				"select_photo_list"
+			],
+			[
+				"sele",
+				"select_bid"
+			],
+			[
+				"log",
+				"log_file_path"
+			],
+			[
+				"sel",
+				"select_bid"
+			],
+			[
+				"fil",
+				"file_path"
+			],
+			[
+				"slel",
+				"select_photo_list"
+			],
+			[
+				"photo",
+				"photo_1	param"
+			],
+			[
+				"test",
+				"testphase	param"
+			],
+			[
+				"ent",
+				"entry_title	statement"
+			],
+			[
+				"en",
+				"entry_token	statement"
+			],
+			[
+				"js",
+				"js_result"
+			],
+			[
+				"bug",
+				"bug_title"
+			],
+			[
+				"form",
+				"form_raw"
+			],
+			[
+				"new",
+				"new_bug	function"
+			],
+			[
+				"sys",
+				"system	function"
+			],
+			[
+				"std",
+				"stdout	statement"
+			],
+			[
+				"wai",
+				"waitFor"
+			],
+			[
+				"user",
+				"user_name"
+			],
+			[
+				"waitF",
+				"waitForSelector"
+			],
+			[
+				"coo",
+				"cookies"
+			],
+			[
+				"find",
+				"findall	function"
+			],
+			[
+				"login",
+				"login_data	statement"
+			],
+			[
+				"pas",
+				"pass_word	statement"
+			],
+			[
+				"enc",
+				"encrypt_iv	statement"
+			],
+			[
+				"pa",
+				"password"
+			],
+			[
+				"encry",
+				"encrypt_iv"
+			],
+			[
+				"ecrty",
+				"encrypt_key"
+			],
+			[
+				"Win",
+				"window	statement"
+			],
+			[
+				"dir",
+				"dir_root	statement"
+			],
+			[
+				"main",
+				"mainloop	function"
+			],
+			[
+				"load",
+				"LoadAppInfo"
+			],
+			[
+				"loada",
+				"LoadAppList"
+			],
+			[
+				"Unloa",
+				"UnLoadPhotos"
+			],
+			[
+				"Unload",
+				"UnloadApplist"
+			],
+			[
+				"bid",
+				"bid_list	statement"
+			],
+			[
+				"Load",
+				"LoadAppList	function"
+			],
+			[
+				"dev",
+				"device_list	statement"
+			],
+			[
+				"devi",
+				"device_list	statement"
+			],
+			[
+				"on",
+				"OnDisconnect	function"
+			],
+			[
+				"get",
+				"getvar	function"
+			],
+			[
+				"fra",
+				"frame_id_info	statement"
+			],
+			[
+				"file",
+				"file_path	statement"
+			],
+			[
+				"phot",
+				"photo_name	param"
+			],
+			[
+				"Pul",
+				"PullPhoto	function"
+			],
+			[
+				"camer",
+				"camera_roll	statement"
+			],
+			[
+				"list",
+				"list_log_list	statement"
+			],
+			[
+				"fi",
+				"file_name	statement"
+			],
+			[
+				"Loa",
+				"LoadAppLogList	function"
+			],
+			[
+				"colu",
+				"columnspan"
+			],
+			[
+				"colum",
+				"columnspan"
+			],
+			[
+				"com",
+				"command"
+			],
+			[
+				"lis",
+				"list_log_list"
+			],
+			[
+				"fr",
+				"frame_info"
+			],
+			[
+				"bi",
+				"bid_list"
+			],
+			[
+				"fol",
+				"folder_path	statement"
+			],
+			[
+				"her",
+				"hero_list"
+			],
+			[
+				"stage",
+				"stage_index"
+			],
+			[
+				"a",
+				"account"
+			],
+			[
+				"gm",
+				"gm_command"
+			],
+			[
+				"kin",
+				"kind_name"
+			],
+			[
+				"adv",
+				"adventure_name"
+			],
+			[
+				"ad",
+				"adventure_name"
+			],
+			[
+				"re",
+				"response"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"_",
+				"_AddHero"
+			],
+			[
+				"fu",
+				"function	function"
+			],
+			[
+				"Sc",
+				"SceneMgr"
+			],
+			[
+				"fun",
+				"function_name"
+			],
+			[
+				"Scnee",
+				"SceneBase"
+			],
+			[
+				"ui",
+				"ui_data"
+			],
+			[
+				"de",
+				"debug_bounding_box"
+			],
+			[
+				"pro",
+				"property"
+			],
+			[
+				"ed",
+				"edit_box"
+			],
+			[
+				"ani",
+				"ani_height"
+			],
+			[
+				"an",
+				"ani_list"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"high",
+				"highlight"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "--=======================================================================\n-- File Name    : sim_scheme.lua\n-- Creator      : yestein(yestein86@gmail.com)\n-- Date         : Mon Nov 23 14:04:11 2015\n-- Description  : a syntactic sugar to simulate scheme\n-- Modify       :\n--=======================================================================\n\nlocal function car(element)\n    if type(element) ~= \"table\" then\n        return element\n    end\n    return element[1]\nend\n\nlocal function cdr(element)\n    if type(element) ~= \"table\" then\n        return nil\n    end\n    return element[2]\nend\n\nlocal function cons(element_a, element_b)\n    return {element_a, element_b}\nend\n\nlocal function dump(element)\n    if type(element) ~= \"table\" then\n        return tostring(element)\n    end\n    local result_str = \"(\"\n    local function _dump(v)\n        if not v then\n            result_str = result_str .. \")\"\n            return result_str\n        end\n        result_str = result_str .. dump(car(v)) .. \", \"\n        return _dump(cdr(v))\n    end\n    return _dump(element)\nend\n\n\nlocal function symbol(symbol_name)\n    local symbol = {__name = name}\n    setmetatable(symbol, {\n        __call = function(tb)\n            print(select(1, ...))\n            return 1\n        end,\n    })\n    return symbol\nend\n\nlocal function test()\n    local a = symbol('a')\n    print(a())\n    print(dump(cons(cons(cons(11,23),cons(10, 11)), cons(3,4))))\nend\n\ntest()\n\nreturn {\n    car = car,\n    cdr = cdr,\n    cons = cons,\n    dump = dump,\n}\n",
+			"file": "sim_scheme.lua",
+			"file_size": 1572,
+			"file_write_time": 130928351333483612,
+			"settings":
+			{
+				"buffer_size": 1503,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "--=======================================================================\n-- File Name    : lua_lib.lua\n-- Creator      : yestein(yestein86@gmail.com)\n-- Date         : create date\n-- Description  : description\n-- Modify       : \n--=======================================================================",
+			"file": "lua_lib.lua",
+			"file_size": 0,
+			"file_write_time": 130928351618449911,
+			"settings":
+			{
+				"buffer_size": 303,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scheme_test.lua",
+			"settings":
+			{
+				"buffer_size": 2167,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/lua.sublime-build",
+			"settings":
+			{
+				"buffer_size": 65,
+				"line_ending": "Unix",
+				"name": "untitled.sublime-build"
+			}
+		}
+	],
+	"build_system": "Packages/User/lua.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/js.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/js.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/User/lua.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/lua.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"last_filter": "remove",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"removep",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"aconda",
+				"Anaconda: Vagrant Status"
+			],
+			[
+				"an",
+				"Anaconda: Vagrant Enable"
+			],
+			[
+				"instalp",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insat",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 381.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Administrator/Documents/GitHub/lua-syntactic-sugar"
+	],
+	"file_history":
+	[
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/InsertDate/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/InsertDate/insert_date.sublime-settings",
+		"/E/python/qzone_ios_tool/main.py",
+		"/E/python/qzone_ios_tool/ui.py",
+		"/E/python/qzone_ios_tool/setting",
+		"/E/python/qzone_ios_tool/login.js",
+		"/E/python/qzone_ios_tool/login.py",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Python.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/E/python/qzone_ios_tool/setting.json",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/Scheme/Main.sublime-menu",
+		"/E/python/qzone_ios_tool/tapd.py",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/SublimeREPL/config/ScriptCS/Main.sublime-menu",
+		"/H/tools_win/Sublime Text 3/sublime_plugin.py",
+		"/E/python/qzone_ios_tool/encrypt.js",
+		"/E/python/qzone_ios_tool/test.html",
+		"/C/Python27/lib/site-packages/requests/cookies.py",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/JavaScript.sublime-settings",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/js.sublime-build",
+		"/E/casperjs/bin/bootstrap.js",
+		"/C/Python27/lib/site-packages/requests/adapters.py",
+		"/E/python/qzone_ios_tool/jquery.cookie.js",
+		"/E/python/qzone_ios_tool/pbkdf2.js",
+		"/E/python/qzone_ios_tool/encrpt.js",
+		"/E/python/qzone_ios_tool/pad-zeropadding.js",
+		"/E/python/qzone_ios_tool/aes.js",
+		"/E/python/qzone_ios_tool/lib/rootdeviceconnection/iphonetunnel.py",
+		"/E/python/qzone_ios_tool/form.js",
+		"/E/python/qzone_ios_tool/lib/appleservice/plist_service.py",
+		"/E/python/qzone_ios_tool/lib/ideviceconnection/sandbox.py",
+		"/E/python/qzone_ios_tool/lib/appleservice/util/bdev.py",
+		"/E/python/qzone_ios_tool/lib/log.py",
+		"/E/python/qzone_ios_tool/main.spec",
+		"/E/python/qzone_ios_tool/device/device.py",
+		"/E/python/qzone_ios_tool/runtime_log/runtime_2015_11_14_11_53_47.log",
+		"/E/python/qzone_ios_tool/runtime_log/runtime_2015_11_14_11_52_3.log",
+		"/E/python/qzone_ios_tool/lib/appleservice/afc.py",
+		"/E/python/qzone_ios_tool/lib/ideviceconnection/cameraroll.py",
+		"/E/iDeviceKit_proj/iDeviceKit_proj/demo.py",
+		"/E/python/qzone_ios_tool/device/devicemanager.py",
+		"/E/python/qzone_ios_tool/device/rootdevice.py",
+		"/E/python/qzone_ios_tool/lib/appleservice/mobilebackup2.py",
+		"/E/python/fauxpas/fauxpas/run.py",
+		"/E/python/fauxpas/fauxpas/tapd.py",
+		"/E/python/qzone_ios_tool/setting.py",
+		"/C/Python27/Lib/site-packages/PyInstaller/building/build_main.py",
+		"/C/Python27/Lib/site-packages/PyInstaller/building/imphook.py",
+		"/C/Python27/Lib/site-packages/PyInstaller/hooks/hook-PIL.py",
+		"/E/python/qzone_ios_tool/device/basedevice.py",
+		"/E/python/qzone_ios_tool/runtime_log/runtime_2015_11_14_11_41_26.log",
+		"/E/python/qzone_ios_tool/runtime.log",
+		"/E/python/qzone_ios_tool/ui.spec",
+		"/C/Python27/Lib/site-packages/PIL/ImageTk.py",
+		"/C/Python27/lib/lib-tk/Tkinter.py",
+		"/C/Python27/Lib/site-packages/PyInstaller/__main__.py",
+		"/C/Python27/Scripts/pyinstaller-script.py",
+		"/E/python/fauxpas/fauxpas/config.conf",
+		"/E/python/qzone_ios_tool/lib/appleservice/usbmux/usbmux.py",
+		"/C/Python27/lib/site-packages/PIL/ImageTk.py",
+		"/C/Python27/lib/site-packages/PIL/Image.py",
+		"/C/Python27/Lib/site-packages/pil-1.1.7-py2.7-win-amd64.egg/_imagingmath.py",
+		"/C/Python27/Lib/site-packages/pil-1.1.7-py2.7-win-amd64.egg/_imagingmath.pyc",
+		"/C/Python27/Lib/site-packages/pil-1.1.7-py2.7-win-amd64.egg/__init__.py",
+		"/E/python/qzone_ios_tool/tools.py",
+		"/E/scheme/test.scm",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Default (Windows).sublime-keymap",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/qiqi_python_head.sublime-snippet",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/lua_head.sublime-snippet",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/E/python/iDeviceKit_proj/lib/appleservice/lockdown.py",
+		"/E/python/iDeviceKit_proj/device/devicemanager.py",
+		"/E/python/iDeviceKit_proj/lib/log.py",
+		"/E/python/iDeviceKit_proj/lib/appleservice/afc.py",
+		"/E/python/iDeviceKit_proj/lib/appleservice/apps.py",
+		"/E/python/iDeviceKit_proj/lib/appleservice/usbmux/usbmux.py",
+		"/C/Python27/lib/socket.py",
+		"/E/python/iDeviceKit_proj/lib/ideviceconnection/sandbox.py",
+		"/E/python/iDeviceKit_proj/device/device.py",
+		"/C/Python27/lib/logging/handlers.py",
+		"/E/python/qzone_itool/test.py",
+		"/E/python/iDeviceKit_proj/demo.py",
+		"/E/python/iDeviceKit_proj/runtime.log",
+		"/E/python/iDeviceKit_proj/lib/ideviceconnection/snapshot.py",
+		"/E/python/iDeviceKit_proj/lib/appleservice/plist_service.py",
+		"/E/python/iDeviceKit_proj/lib/ideviceconnection/cameraroll.py",
+		"/E/python/iDeviceKit_proj/2015-10-16.log",
+		"/E/python/iDeviceKit_proj/iDeviceKit_proj/device/device.py",
+		"/E/python/iDeviceKit_proj/iDeviceKit_proj/lib/ideviceconnection/snapshot.py",
+		"/E/python/iDeviceKit_proj/iDeviceKit_proj/device/devicemanager.py",
+		"/E/python/iDeviceKit_proj/iDeviceKit_proj/lib/appleservice/lockdown.py",
+		"/E/python/iDeviceKit_proj/iDeviceKit_proj/demo.py",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/E/iDeviceKit_proj/iDeviceKit_proj/lib/appleservice/plist_service.py",
+		"/E/iDeviceKit_proj/iDeviceKit_proj/lib/appleservice/lockdown.py",
+		"/E/iDeviceKit_proj/iDeviceKit_proj/device/devicemanager.py",
+		"/E/iDeviceKit_proj/iDeviceKit_proj/lib/rootdeviceconnection/iphonetunnel.py",
+		"/C/Program Files (x86)/Microsoft Visual Studio 11.0/Common7/IDE/ItemTemplates/VC/Code/Code.VSTDIR",
+		"/D/egg_world/server/skynet/egg_world/logic/model/battle/battle_field.lua",
+		"/F/linux/spider/demo1.py",
+		"/D/egg_world/server/skynet/lualib/sproto.lua",
+		"/D/egg_world/server/skynet/egg_world/logic/config/adventure_config.lua",
+		"/D/egg_world/server/skynet/egg_world/logic/model/map/adventure.lua",
+		"/D/egg_world/server/skynet/egg_world/protocol/s2c.lua",
+		"/D/egg_world/server/skynet/egg_world/logic/model/foster/tavern.lua",
+		"/D/egg_world/server/skynet/egg_world/logic/model/foster/player.lua",
+		"/D/egg_world/server/skynet/egg_world/logic/model/foster/economic.lua",
+		"/D/egg_world/server/skynet/egg_world/service/agent.lua",
+		"/D/egg_world/server/skynet/egg_world/protocol/c2s.lua",
+		"/D/egg_world/server/skynet/egg_world/logic/model/foster/army.lua",
+		"/D/egg_world/server/skynet/egg_world/service/database.lua",
+		"/D/egg_world/server/skynet/egg_world/framework/preload.lua",
+		"/D/egg_world/server/skynet/egg_world/logic/define.lua",
+		"/D/egg_world/server/skynet/egg_world/service/player_mgr.lua",
+		"/D/egg_world/server/skynet/egg_world/main.lua",
+		"/D/egg_world/server/skynet/egg_world/service/debug_console.lua",
+		"/D/egg_world/server/skynet/egg_world/service/console.lua",
+		"/D/egg_world/server/skynet/egg_world/logic/protocol_process.lua",
+		"/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/D/virtual/winxp/Vagrantfile",
+		"/D/egg_world/product/win32/src/seed/preload.lua",
+		"/D/egg_world/product/win32/src/seed/view/first_scene.lua",
+		"/D/egg_world/product/win32/src/framework/cocos2d/skelton.lua",
+		"/D/egg_world/server/Vagrantfile",
+		"/D/egg_world/product/win32/src/seed/config/character_config_base.lua",
+		"/D/egg_world/product/win32/src/seed/model/battle/battle_field.lua",
+		"/D/egg_world/product/win32/src/framework/effects/label_effect.lua"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+			"<open folders>",
+			"E:\\python\\qzone_ios_tool",
+			"E:\\python\\fauxpas",
+			"<open folders>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"frame_user",
+			"_frame_pin",
+			"w",
+			"frame_user",
+			"_frame_id",
+			"frame_user",
+			"frame_photo",
+			"frame_info",
+			"frame_bid",
+			"frame_id_info",
+			"frame_info",
+			"frame_log",
+			"exportselection = False, relief = GROOVE",
+			"APP_BUNDLE_ID_LIST",
+			"remove",
+			"js_result",
+			"capture",
+			"attachment_count",
+			"attachmen_count",
+			"self.select_file_name = None",
+			"LoadAppInfo",
+			",",
+			"photo_image_list",
+			"global",
+			"select_file_name",
+			"log",
+			"or ",
+			"||",
+			"and",
+			"&&",
+			"and",
+			"PullFile",
+			"select_file_name",
+			"photo_image_list",
+			"select_file_name",
+			"PullSelectFile",
+			"PreviewPhoto",
+			"%s",
+			",",
+			"'),\n",
+			"this",
+			",",
+			"=",
+			"newbug",
+			"8",
+			"55",
+			"user_name",
+			"pin",
+			"entry_pwd",
+			"USERNAME",
+			"entry_pwd",
+			"USERNAME",
+			":",
+			"mycars",
+			"photo_1",
+			"log_file_path",
+			"urllib",
+			".click",
+			"sendkeys",
+			"getCurrent",
+			"getCurrentUrl",
+			"exists",
+			"evaluate",
+			"\"",
+			"tkMessageBox",
+			"brower",
+			"USERNAME",
+			"password",
+			"=",
+			"'  '",
+			"' '",
+			"Crypto",
+			"login_button",
+			"CryptoJS",
+			"check_passwd_intensity",
+			"}",
+			";",
+			"login_via_password",
+			"type=\"hidden\"",
+			"encrypt",
+			"data",
+			"data[Login]",
+			"+ZZXn+K6WgYWhZr+1Lyx+yNxn5toHHu+ClgsQOevn4A=",
+			"\n        ",
+			"list_app_dir",
+			"LoadAppInfo",
+			"print",
+			"DisconnectDevice",
+			"ConnectDevice",
+			"UnloadApplist",
+			"refresh",
+			"has",
+			"device",
+			"Uninit",
+			"Close socket",
+			"CloseSocket",
+			"print",
+			"installed",
+			"The app com.tencent.qzone.debug may not be installed",
+			"Using iTunes",
+			"Connecting to device",
+			"Connecting",
+			"LoadAppInfo",
+			"print",
+			"Connecting to device",
+			"\"./runtime_log\"",
+			"LOG_EXPORT",
+			"runtime.log",
+			"runtime",
+			"excluded_node",
+			"Removing import",
+			"Removing",
+			"FixTk",
+			"Removing",
+			"ImageTk",
+			"LoadAppInfo",
+			"bind",
+			"LoadAppInfo",
+			"runtime",
+			"log",
+			"logger",
+			"tapd",
+			"APP_BUNDLE_ID_LIST",
+			"height = 30",
+			"ClearPreview",
+			"list_photo_list",
+			"UnLoadAppList",
+			"photo_image_list"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "C:\\Users\\Administrator\\Documents\\GitHub\\lua-syntactic-sugar"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "sim_scheme.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1503,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1243,
+								1243
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"function_name_status_row": 48,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 792.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "lua_lib.lua",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								180,
+								169
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"function_name_status_row": 3,
+							"open_with_edit": true,
+							"syntax": "Packages/Lua/Lua.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "scheme_test.lua",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2167,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								523,
+								523
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"function_name_status_row": 16,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/lua.sublime-build",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 65,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"function_name_status_row": 1,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 300.0
+	},
+	"output.find_results":
+	{
+		"height": 142.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"devi",
+				"device\\device.py"
+			],
+			[
+				"log",
+				"lib\\log.py"
+			],
+			[
+				"mux",
+				"qzone_ios_tool\\lib\\appleservice\\usbmux\\usbmux.py"
+			],
+			[
+				"usbm",
+				"iDeviceKit_proj\\lib\\appleservice\\usbmux\\usbmux.py"
+			],
+			[
+				"usbmux",
+				"iDeviceKit_proj\\lib\\appleservice\\usbmux\\usbmux.py"
+			],
+			[
+				"sandbo",
+				"iDeviceKit_proj\\lib\\ideviceconnection\\sandbox.py"
+			],
+			[
+				"plist",
+				"iDeviceKit_proj\\lib\\appleservice\\plist_service.py"
+			],
+			[
+				"lock",
+				"lib\\appleservice\\lockdown.py"
+			],
+			[
+				"bat",
+				"egg_world\\logic\\model\\battle\\battle_field.lua"
+			],
+			[
+				"lib",
+				"egg_world\\framework\\lib.lua"
+			],
+			[
+				"battt",
+				"egg_world\\logic\\model\\battle\\battle_field.lua"
+			],
+			[
+				"protocol",
+				"egg_world\\logic\\protocol_process.lua"
+			],
+			[
+				"army",
+				"egg_world\\logic\\model\\foster\\army.lua"
+			],
+			[
+				"hero",
+				"egg_world\\logic\\model\\foster\\hero.lua"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "spid",
+		"selected_items":
+		[
+			[
+				"spid",
+				"G:\\快盘\\python\\spider.sublime-project"
+			],
+			[
+				"sp",
+				"G:\\快盘\\python\\spider.sublime-project"
+			],
+			[
+				"sche",
+				"E:\\scheme\\scheme.sublime-workspace"
+			],
+			[
+				"spd",
+				"G:\\快盘\\python\\spider.sublime-project"
+			],
+			[
+				"spdi",
+				"G:\\快盘\\python\\spider.sublime-project"
+			],
+			[
+				"spe",
+				"G:\\快盘\\python\\spider.sublime-project"
+			],
+			[
+				"spider",
+				"G:\\快盘\\python\\spider.sublime-project"
+			],
+			[
+				"SPID",
+				"G:\\快盘\\python\\spider.sublime-project"
+			],
+			[
+				"spi",
+				"G:\\快盘\\python\\spider.sublime-project"
+			],
+			[
+				"",
+				"D:\\server.sublime-workspace"
+			],
+			[
+				"cli",
+				"D:\\client.sublime-workspace"
+			],
+			[
+				"c",
+				"D:\\client.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 297.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
