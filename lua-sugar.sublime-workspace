@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"ele",
+				"element_type"
+			],
+			[
+				"el",
+				"element_type"
+			],
+			[
+				"multipli",
+				"multiplicand"
+			],
+			[
+				"ma",
+				"make_product"
+			],
+			[
+				"exp",
+				"exp_type"
+			],
+			[
+				"func",
+				"function	function"
+			],
+			[
+				"sim",
+				"sim_scheme"
+			],
+			[
 				"frame",
 				"frame_user"
 			],
@@ -348,24 +376,34 @@
 	"buffers":
 	[
 		{
-			"contents": "--=======================================================================\n-- File Name    : sim_scheme.lua\n-- Creator      : yestein(yestein86@gmail.com)\n-- Date         : Mon Nov 23 14:04:11 2015\n-- Description  : a syntactic sugar to simulate scheme\n-- Modify       :\n--=======================================================================\n\nlocal function car(element)\n    if type(element) ~= \"table\" then\n        return element\n    end\n    return element[1]\nend\n\nlocal function cdr(element)\n    if type(element) ~= \"table\" then\n        return nil\n    end\n    return element[2]\nend\n\nlocal function cons(element_a, element_b)\n    return {element_a, element_b}\nend\n\nlocal function dump(element)\n    if type(element) ~= \"table\" then\n        return tostring(element)\n    end\n    local result_str = \"(\"\n    local function _dump(v)\n        if not v then\n            result_str = result_str .. \")\"\n            return result_str\n        end\n        result_str = result_str .. dump(car(v)) .. \", \"\n        return _dump(cdr(v))\n    end\n    return _dump(element)\nend\n\n\nlocal function symbol(symbol_name)\n    local symbol = {__name = name}\n    setmetatable(symbol, {\n        __call = function(tb)\n            print(select(1, ...))\n            return 1\n        end,\n    })\n    return symbol\nend\n\nlocal function test()\n    local a = symbol('a')\n    print(a())\n    print(dump(cons(cons(cons(11,23),cons(10, 11)), cons(3,4))))\nend\n\ntest()\n\nreturn {\n    car = car,\n    cdr = cdr,\n    cons = cons,\n    dump = dump,\n}\n",
 			"file": "sim_scheme.lua",
-			"file_size": 1572,
-			"file_write_time": 130928351333483612,
 			"settings":
 			{
-				"buffer_size": 1503,
+				"buffer_size": 2973,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "--=======================================================================\n-- File Name    : lua_lib.lua\n-- Creator      : yestein(yestein86@gmail.com)\n-- Date         : create date\n-- Description  : description\n-- Modify       : \n--=======================================================================",
-			"file": "lua_lib.lua",
-			"file_size": 0,
-			"file_write_time": 130928351618449911,
+			"file": "symbol_lamda.lua",
 			"settings":
 			{
-				"buffer_size": 303,
+				"buffer_size": 3276,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "lua_lib.lua",
+			"settings":
+			{
+				"buffer_size": 1202,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+			"settings":
+			{
+				"buffer_size": 521,
 				"line_ending": "Unix"
 			}
 		},
@@ -373,7 +411,7 @@
 			"file": "scheme_test.lua",
 			"settings":
 			{
-				"buffer_size": 2167,
+				"buffer_size": 2192,
 				"line_ending": "Windows"
 			}
 		},
@@ -381,7 +419,7 @@
 			"file": "/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/lua.sublime-build",
 			"settings":
 			{
-				"buffer_size": 65,
+				"buffer_size": 71,
 				"line_ending": "Unix",
 				"name": "untitled.sublime-build"
 			}
@@ -671,7 +709,7 @@
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -689,6 +727,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"symbol",
+			"lua_type",
+			"type",
+			"gettype",
+			"IsSymbol",
+			"makesum",
+			"IsVariable",
 			"frame_user",
 			"_frame_pin",
 			"w",
@@ -809,14 +854,7 @@
 			"LoadAppInfo",
 			"runtime",
 			"log",
-			"logger",
-			"tapd",
-			"APP_BUNDLE_ID_LIST",
-			"height = 30",
-			"ClearPreview",
-			"list_photo_list",
-			"UnLoadAppList",
-			"photo_image_list"
+			"logger"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -824,6 +862,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"type",
+			"isSymbol"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -849,15 +889,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1503,
+						"buffer_size": 2973,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1243,
-								1243
+								829,
+								829
 							]
 						],
 						"settings":
@@ -865,70 +905,70 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
 							],
-							"function_name_status_row": 48,
+							"function_name_status_row": 32,
 							"origin_encoding": "ASCII",
 							"syntax": "Packages/Lua/Lua.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 792.0,
+						"translation.y": 624.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -936,19 +976,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "lua_lib.lua",
+					"file": "symbol_lamda.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 303,
+						"buffer_size": 3276,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								180,
-								169
+								3217,
+								3217
 							]
 						],
 						"settings":
@@ -956,68 +996,69 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content"
 							],
-							"function_name_status_row": 3,
+							"function_name_status_row": 128,
 							"open_with_edit": true,
+							"origin_encoding": "ASCII",
 							"syntax": "Packages/Lua/Lua.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2568.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1025,19 +1066,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "scheme_test.lua",
-					"semi_transient": true,
+					"file": "lua_lib.lua",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2167,
+						"buffer_size": 1202,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								523,
-								523
+								278,
+								278
 							]
 						],
 						"settings":
@@ -1045,41 +1086,101 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"function_name_status_row": 6,
+							"open_with_edit": true,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Lua/Lua.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 618.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 521,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30,
+								30
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
@@ -1090,20 +1191,50 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
 							],
-							"function_name_status_row": 16,
+							"function_name_status_row": 2,
 							"origin_encoding": "ASCII",
-							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -1111,24 +1242,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/lua.sublime-build",
+					"buffer": 4,
+					"file": "scheme_test.lua",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 65,
+						"buffer_size": 2192,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								29,
-								29
+								715,
+								715
 							]
 						],
 						"settings":
@@ -1136,11 +1267,26 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_default",
 								"bh_default_center",
 								"bh_default_open",
@@ -1151,26 +1297,6 @@
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
@@ -1181,18 +1307,114 @@
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content"
+							],
+							"function_name_status_row": 25,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 288.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/Administrator/AppData/Roaming/Sublime Text 3/Packages/User/lua.sublime-build",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 71,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content"
 							],
-							"function_name_status_row": 1,
+							"function_name_status_row": 4,
 							"origin_encoding": "ASCII",
 							"syntax": "Packages/JavaScript/JSON.tmLanguage"
 						},
@@ -1200,7 +1422,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1239,7 +1461,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 300.0
+		"height": 330.0
 	},
 	"output.find_results":
 	{
@@ -1249,7 +1471,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 60.0
+		"height": 74.0
 	},
 	"save_all_on_build": true,
 	"select_file":
