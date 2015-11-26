@@ -17,11 +17,11 @@ local IsNum
 local parse_exp
 
 IsVar = function(element)
-    return type(element) == "var"
+    return scm_type(element) == "var"
 end
 
 IsNum = function(element)
-    return type(element) == "num"
+    return scm_type(element) == "num"
 end
 
 local function addend(exp)
@@ -48,8 +48,12 @@ local function make_product(e1, e2)
     return list(symbol("*"), e1, e2)
 end
 
+local function exp(expression)
+
+end
+
 local function deriv(exp, var)
-    local exp_type = type(exp)
+    local exp_type = scm_type(exp)
     if exp_type ==  "num" then
         return 0
     elseif exp_type == "var" then
@@ -74,7 +78,7 @@ local function deriv(exp, var)
         print(exp_type)
         ShowTB(exp)
         print(isSymbol(exp))
-        print(type(exp))
+        print(scm_type(exp))
     end
 end
 
@@ -110,7 +114,7 @@ local function Test()
 
     local function TestExp()
         print("TestExp")
-        print(type(list(symbol("+"), symbol('x'), 3)))
+        print(scm_type(list(symbol("+"), symbol('x'), 3)))
     end
 
     local function TestDerive()

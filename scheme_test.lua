@@ -8,7 +8,6 @@
 local lib = require("lua_lib")
 local scheme = require("sim_scheme")
 
-load_lib(_ENV, lib)
 load_lib(_ENV, scheme)
 
 local function accumulate(op, first_value, element)

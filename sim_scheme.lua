@@ -5,20 +5,16 @@
 -- Description  : a syntactic sugar to simulate scheme
 -- Modify       :
 --=======================================================================
-local lib = require("lua_lib")
-load_lib(_ENV, lib)
-
-local lua_type = type
 
 local function car(element)
-    if lua_type(element) ~= "table" then
+    if type(element) ~= "table" then
         return element
     end
     return element[1]
 end
 
 local function cdr(element)
-    if lua_type(element) ~= "table" then
+    if type(element) ~= "table" then
         return nil
     end
     return element[2]
@@ -28,11 +24,11 @@ local function cons(element_a, element_b)
     return {element_a, element_b}
 end
 
-local function type(element)
+local function scm_type(element)
     if tonumber(element) then
         return "num"
     end
-    if lua_type(element) == "table" and element.__is_symbol then
+    if type(element) == "table" and element.__is_symbol then
         local symbol = element
         if tonumber(symbol()) then
             return "num"
@@ -45,7 +41,7 @@ local function type(element)
     if car(element) then
         return "pair"
     end
-    return lua_type(element)
+    return type(element)
 end
 
 local function list(element, ...)
@@ -78,14 +74,14 @@ local function symbol(symbol_name, func)
 end
 
 local function isSymbol(symbol)
-    if lua_type(symbol) ~= "table" then
+    if type(symbol) ~= "table" then
         return false
     end
     return symbol.__is_symbol
 end
 
 local function dump(element)
-    local element_type = type(element)
+    local element_type = scm_type(element)
     if element_type ~= "pair" then
         if isSymbol(element) then
             return element()
@@ -105,9 +101,9 @@ local function dump(element)
 end
 
 local function test()
-    print(type(1))
-    print(type(cons(1,2)))
-    print(type(symbol(3)))
+    print(scm_type(1))
+    print(scm_type(cons(1,2)))
+    print(scm_type(symbol(3)))
     print(dump(cons(cons(cons(11,23),cons(10, 11)), cons(3,4))))
     print(dump(list(list(symbol("+", function () end), symbol("x"),3), list(symbol("+", function () end),2,3))))
 end
@@ -122,7 +118,7 @@ return {
     cons = cons,
     dump = dump,
     list = list,
-    type = type,
+    scm_type = scm_type,
     isSymbol = isSymbol,
     symbol = symbol,
 }

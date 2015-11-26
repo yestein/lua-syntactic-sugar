@@ -42,5 +42,12 @@ function Lib.ShowTB(table_raw, n)
     showTB(table_raw, 1, n)
 end
 
+function Lib.CountTB(table)
+    local count = 0
+    for k, v in pairs(table) do
+        count = count + 1
+    end
+    return count
+end
 
 return Lib
