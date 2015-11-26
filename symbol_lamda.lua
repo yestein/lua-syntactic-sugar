@@ -237,10 +237,8 @@ local function Test()
 
     local function TestDerive()
         print("TestDerive")
-        -- print(dump(deriv(exp("x * 3 * x"), symbol("x"))))
         local expression = exp("-3 * x * x")
-        print(dump(deriv(expression, symbol("x"))))
-        print(exp2str(deriv(expression, symbol("x"))))
+        print(exp2str(expression))
         print(exp2str(TransSimple(deriv(expression, symbol("x")))))
     end
     -- TestisSymbol()
