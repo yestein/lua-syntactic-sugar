@@ -104,19 +104,48 @@ local function GetLexParser(file_path)
                 end
                 i = i - 1
                 ei = i
-                table.insert(token_list, {expression:sub(si, ei), lex_rule.SYMBOL[state - 1][1]})
+                local _expression = expression:sub(si, ei)
+                local _type = lex_rule.SYMBOL[state - 1][1]
+                table.insert(token_list,
+                    {
+                        GetType = function()
+                            return _type
+                        end,
+                        GetExpression = function()
+                            return _expression
+                        end,
+                    }
+                )
             end
             i = i + 1
         end
-        return token_list
+
+        local index = 0
+        return{
+            GetToken = function()
+                index = index + 1
+                return token_list[index]
+            end,
+            BackToken = function()
+                index = index - 1
+                return token_list[index]
+            end,
+            GetAll = function()
+                return token_list
+            end,
+        }
+
     end
 end
 
 if arg[0] == "lex_analysis.lua" then
-    local lib = require("lua_lib")
     local parser = GetLexParser("lex_rule.lua")
-    local list = parser("x+2+3")
-    lib.ShowTB(list, 2)
+    local token_pool = parser("x+2+3")
+    local token = token_pool.GetToken()
+    while token do
+        print(token.GetExpression(), token.GetType())
+        token = token_pool.GetToken()
+    end
 end
 
 return {GetLexParser = GetLexParser}

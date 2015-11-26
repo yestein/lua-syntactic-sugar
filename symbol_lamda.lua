@@ -7,6 +7,8 @@
 --=======================================================================
 local lib = require("lua_lib")
 local scheme = require("sim_scheme")
+local lex = require("lex_analysis")
+local synax = require("synax_parse")
 
 load_lib(_ENV, lib)
 load_lib(_ENV, scheme)
@@ -49,7 +51,10 @@ local function make_product(e1, e2)
 end
 
 local function exp(expression)
-
+    local tree, token_pool = synax.Parse(lex.GetLexParser("lex_rule.lua"), expression)
+    print(tree, token_pool)
+    print(synax.Dump(tree))
+    -- ShowTB(token_pool.GetAll(), 4)
 end
 
 local function deriv(exp, var)
@@ -131,6 +136,8 @@ local function Test()
     TestIsNum()
     TestExp()
     TestDerive()
+
+    exp("3 + x * x")
 end
 
 if arg[0] == "symbol_lamda.lua" then
