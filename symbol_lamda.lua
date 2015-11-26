@@ -41,6 +41,23 @@ local function generateAdd()
     )
 end
 
+local function generateSub()
+    return symbol('-',
+        function(a, b)
+            if scm_type(a) == "num" and not b then
+                return symbol(tonumber(a()) * -1)
+            elseif scm_type(a) == "num" and scm_type(b) == "num" then
+                return symbol(tonumber(a()) - tonumber(b()))
+            elseif scm_type(a) == "num" and tonumber(a()) == 0 then
+                return b
+            elseif scm_type(b) == "num" and tonumber(b()) == 0 then
+                return a
+            end
+            return list(generateSub(), a, b)
+        end
+    )
+end
+
 local function generateMul()
     return symbol('*',
         function(a, b)
@@ -58,12 +75,27 @@ local function generateMul()
     )
 end
 
-local function make_sum(e1, e2)
-    return list(generateAdd(), e1, e2)
+local function generateDiv()
+    return symbol('/',
+        function(a, b)
+            if (scm_type(b) == "num" and tonumber(b()) == 0) then
+                assert(false)
+            elseif (scm_type(a) == "num" and tonumber(a()) == 0) then
+                return symbol(0)
+            elseif scm_type(a) == "num" and scm_type(b) == "num" then
+                return symbol(tonumber(a()) / tonumber(b()))
+            elseif scm_type(a) == "num" and tonumber(a()) == 1 then
+                return b
+            elseif scm_type(b) == "num" and tonumber(b()) == 1 then
+                return a
+            end
+            return list(generateMul(), a, b)
+        end
+    )
 end
 
-local function make_product(e1, e2)
-    return list(generateMul(), e1, e2)
+local function make_op(op_func, e1, e2)
+    return list(op_func(), e1, e2)
 end
 
 local function exp(expression)
@@ -71,8 +103,12 @@ local function exp(expression)
     local function genSymbol(token)
         if token.GetExpression() == '+' then
             return generateAdd()
+        elseif token.GetExpression() == '-' then
+            return generateSub()
         elseif token.GetExpression() == '*' then
             return generateMul()
+        elseif token.GetExpression() == "/" then
+            return generateDiv()
         end
         return symbol(token.GetExpression())
     end
@@ -112,6 +148,9 @@ local function exp2str(expression)
 end
 
 local function deriv(exp, var)
+    if not exp then
+        return
+    end
     local exp_type = scm_type(exp)
     if exp_type ==  "num" then
         return symbol(0)
@@ -124,11 +163,13 @@ local function deriv(exp, var)
     elseif exp_type == "pair" then
         op = car(exp)
         if op() == "+" then
-            return make_sum(deriv(cadr(exp), var), deriv(caddr(exp), var))
+            return make_op(generateAdd, deriv(cadr(exp), var), deriv(caddr(exp), var))
+        elseif op() == "-" then
+            return make_op(generateSub, deriv(cadr(exp), var), deriv(caddr(exp), var))
         elseif op() == '*' then
-            return make_sum(
-                make_product(cadr(exp), deriv(caddr(exp), var)),
-                make_product(deriv(cadr(exp), var), caddr(exp))
+            return make_op(generateAdd,
+                make_op(generateMul, cadr(exp), deriv(caddr(exp), var)),
+                make_op(generateMul, deriv(cadr(exp), var), caddr(exp))
             )
         else
             print("error unknown expression")
@@ -184,13 +225,12 @@ local function Test()
 
     local function TestExp()
         print("TestExp")
-        print(dump(exp("x + 0 + 0 + 1")))
+        print(dump(exp("-2 * 1 + 0 * x + 2 * 3 + 1*y")))
     end
 
     local function TestTransSimple()
         print("TestTransSimple")
-        local exp2 = exp("3 * 1 + 0 * x + 2 * 3 + 1*y")
-        print(dump(exp2))
+        local exp2 = exp("-2 * 1 + 0 * x + 2 * 3 + 1*y")
         print(dump(TransSimple(exp2)))
         print(dump(exp2str(TransSimple(exp2))))
     end
@@ -198,16 +238,16 @@ local function Test()
     local function TestDerive()
         print("TestDerive")
         -- print(dump(deriv(exp("x * 3 * x"), symbol("x"))))
-        local expression = exp("3 * x * x * x")
+        local expression = exp("-3 * x * x")
         print(dump(deriv(expression, symbol("x"))))
         print(exp2str(deriv(expression, symbol("x"))))
         print(exp2str(TransSimple(deriv(expression, symbol("x")))))
     end
-    TestisSymbol()
-    TestSymbolEqual()
-    TestIsVar()
-    TestIsNum()
-    -- TestExp()
+    -- TestisSymbol()
+    -- TestSymbolEqual()
+    -- TestIsVar()
+    -- TestIsNum()
+    TestExp()
     TestTransSimple()
     TestDerive()
 end

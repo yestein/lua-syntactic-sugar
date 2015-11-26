@@ -6,13 +6,13 @@
 -- Modify       :
 --=======================================================================
 
-local ParseSubExp
+local ParseExpression
 local ParseTerm
 local ParseFactor
 local ParseAbs
 local ParseElem
 
-ParseSubExp = function(token_pool)
+ParseExpression = function(token_pool)
     local tree_root = ParseTerm(token_pool)
     local token = token_pool.GetToken()
     local token_type
@@ -76,9 +76,8 @@ ParseFactor = function(token_pool)
         }
     else
         token_pool.BackToken()
+        tree_root = ParseAbs(token_pool);
     end
-
-    tree_root = ParseAbs(token_pool);
 
     return tree_root
 end
@@ -89,21 +88,25 @@ ParseAbs = function(token_pool)
     local token_type = token.GetType()
 
     if token_type == "LP" then
-        tree_root = ParseSubExp(token_pool)
+        tree_root = ParseExpression(token_pool)
         token = token_pool.GetToken(token_pool);
         token_type = token.GetType()
         assert(token_type == "RP")
     else
         token_pool.BackToken()
+        tree_root = ParseElem(token_pool)
     end
-    tree_root = ParseElem(token_pool)
     return tree_root
 end
 
 ParseElem = function(token_pool)
     local tree_root
     local token = token_pool.GetToken()
-    local token_type = token.GetType()
+    local token_type
+    if not token then
+        goto Exit1
+    end
+    token_type = token.GetType()
 
     if token_type == "ID" or token_type == "NUMBER" then
         tree_root = {
@@ -112,7 +115,7 @@ ParseElem = function(token_pool)
     else
         assert(false)
     end
-
+::Exit1::
     return tree_root
 end
 
@@ -206,11 +209,11 @@ end
 if arg[0] == "synax_parse.lua" then
     local lex = require("lex_analysis")
     local parser = lex.GetLexParser("lex_rule.lua")
-    local token_pool = parser("x*2+3*x")
+    local token_pool = parser("x*(-2+3)*x")
     for i, token in ipairs(token_pool.GetAll()) do
         print(i, token.GetExpression(), token.GetType())
     end
-    local tree = ParseSubExp(token_pool)
+    local tree = ParseExpression(token_pool)
     print(DumpTree(tree))
     print(DumpTree2(tree, 7))
 end
@@ -219,7 +222,7 @@ end
 return {
     Parse = function(lex_parser, expression)
         local token_pool = lex_parser(expression)
-        return ParseSubExp(token_pool), token_pool
+        return ParseExpression(token_pool), token_pool
     end,
     Dump = DumpTree,
 }
