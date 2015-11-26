@@ -23,58 +23,112 @@ IsVar = function(element)
 end
 
 IsNum = function(element)
-    return scm_type(element) == "num"
+    return type(element) == "number" or scm_type(element) == "num"
 end
 
-local function addend(exp)
-    return car(cdr(exp))
+local function generateAdd()
+    return symbol('+',
+        function(a, b)
+            if scm_type(a) == "num" and scm_type(b) == "num" then
+                return symbol(tonumber(a()) + tonumber(b()))
+            elseif scm_type(a) == "num" and tonumber(a()) == 0 then
+                return b
+            elseif scm_type(b) == "num" and tonumber(b()) == 0 then
+                return a
+            end
+            return list(generateAdd(), a, b)
+        end
+    )
 end
 
-local function augend(exp)
-    return car(cdr(cdr(exp)))
-end
-
-local function multiplier(exp)
-    return car(cdr(exp))
-end
-
-local function multiplicand(exp)
-    return car(cdr(cdr(exp)))
+local function generateMul()
+    return symbol('*',
+        function(a, b)
+            if scm_type(a) == "num" and scm_type(b) == "num" then
+                return symbol(tonumber(a()) * tonumber(b()))
+            elseif (scm_type(a) == "num" and tonumber(a()) == 0) or (scm_type(b) == "num" and tonumber(b()) == 0) then
+                return symbol(0)
+            elseif scm_type(a) == "num" and tonumber(a()) == 1 then
+                return b
+            elseif scm_type(b) == "num" and tonumber(b()) == 1 then
+                return a
+            end
+            return list(generateMul(), a, b)
+        end
+    )
 end
 
 local function make_sum(e1, e2)
-    return list(symbol("+"), e1, e2)
+    return list(generateAdd(), e1, e2)
 end
 
 local function make_product(e1, e2)
-    return list(symbol("*"), e1, e2)
+    return list(generateMul(), e1, e2)
 end
 
 local function exp(expression)
-    local tree, token_pool = synax.Parse(lex.GetLexParser("lex_rule.lua"), expression)
-    print(tree, token_pool)
-    print(synax.Dump(tree))
-    -- ShowTB(token_pool.GetAll(), 4)
+    local syntax_tree, token_pool = synax.Parse(lex.GetLexParser("lex_rule.lua"), expression)
+    local function genSymbol(token)
+        if token.GetExpression() == '+' then
+            return generateAdd()
+        elseif token.GetExpression() == '*' then
+            return generateMul()
+        end
+        return symbol(token.GetExpression())
+    end
+    local function _exp_real(tree)
+        if not tree then
+            return
+        end
+        if tree.left then
+            return list(genSymbol(tree.value), _exp_real(tree.left), _exp_real(tree.right))
+        elseif tree.right then
+            return list(genSymbol(tree.value), _exp_real(tree.right))
+        else
+            return genSymbol(tree.value)
+        end
+    end
+    return _exp_real(syntax_tree)
+end
+
+local function exp2str(expression)
+    if scm_type(expression) ~= "pair" then
+        if isSymbol(expression) then
+            return expression()
+        else
+            return tostring(expression)
+        end
+    end
+    local element = car(expression)
+    local param1 = car(cdr(expression))
+    local param2 = car(cdr(cdr(expression)))
+    if param1 and param2 then
+        return "(" .. exp2str(param1) .. element() .. exp2str(param2) .. ")"
+    elseif not param2 then
+        return "(" .. element() .. exp2str(param1) .. ")"
+    else
+        return element()
+    end
 end
 
 local function deriv(exp, var)
     local exp_type = scm_type(exp)
     if exp_type ==  "num" then
-        return 0
+        return symbol(0)
     elseif exp_type == "var" then
         if exp == var then
-            return 1
+            return symbol(1)
         else
-            return 0
+            return symbol(0)
         end
     elseif exp_type == "pair" then
         op = car(exp)
         if op() == "+" then
-            return make_sum(deriv(addend(exp), var), deriv(augend(exp), var))
+            return make_sum(deriv(cadr(exp), var), deriv(caddr(exp), var))
         elseif op() == '*' then
             return make_sum(
-                make_product(multiplier(exp), deriv(multiplicand(exp), var)),
-                make_product(deriv(multiplier(exp), var), multiplicand(exp))
+                make_product(cadr(exp), deriv(caddr(exp), var)),
+                make_product(deriv(cadr(exp), var), caddr(exp))
             )
         else
             print("error unknown expression")
@@ -85,6 +139,17 @@ local function deriv(exp, var)
         print(isSymbol(exp))
         print(scm_type(exp))
     end
+end
+
+local function TransSimple(expression)
+    if isSymbol(expression) then
+        return expression
+    end
+    local element = car(expression)
+    if scm_type(element) == "op" then
+        return element.__function(TransSimple(cadr(expression)), TransSimple(caddr(expression)))
+    end
+    return element
 end
 
 local function Test()
@@ -119,25 +184,32 @@ local function Test()
 
     local function TestExp()
         print("TestExp")
-        print(scm_type(list(symbol("+"), symbol('x'), 3)))
+        print(dump(exp("x + 0 + 0 + 1")))
+    end
+
+    local function TestTransSimple()
+        print("TestTransSimple")
+        local exp2 = exp("3 * 1 + 0 * x + 2 * 3 + 1*y")
+        print(dump(exp2))
+        print(dump(TransSimple(exp2)))
+        print(dump(exp2str(TransSimple(exp2))))
     end
 
     local function TestDerive()
         print("TestDerive")
-        print(dump(deriv(
-            list(symbol("*"), symbol("x"),
-                list(symbol("*"), symbol('x'), symbol('3'))
-            ),
-             symbol("x"))))
+        -- print(dump(deriv(exp("x * 3 * x"), symbol("x"))))
+        local expression = exp("3 * x * x * x")
+        print(dump(deriv(expression, symbol("x"))))
+        print(exp2str(deriv(expression, symbol("x"))))
+        print(exp2str(TransSimple(deriv(expression, symbol("x")))))
     end
     TestisSymbol()
     TestSymbolEqual()
     TestIsVar()
     TestIsNum()
-    TestExp()
+    -- TestExp()
+    TestTransSimple()
     TestDerive()
-
-    exp("3 + x * x")
 end
 
 if arg[0] == "symbol_lamda.lua" then

@@ -31,6 +31,7 @@ ParseSubExp = function(token_pool)
         if not token then
             goto Exit1
         end
+        token_type = token.GetType()
     end
     token_pool.BackToken()
 
@@ -57,6 +58,7 @@ ParseTerm = function(token_pool)
         if not token then
             goto Exit1
         end
+        token_type = token.GetType()
     end
     token_pool.BackToken()
 ::Exit1::
@@ -156,6 +158,7 @@ local function DumpTree(tree)
     if not tree then
         return
     end
+
     local str = "(" .. tree.value.GetExpression()
     local left_str = DumpTree(tree.left)
     if left_str then
@@ -169,12 +172,47 @@ local function DumpTree(tree)
     return str
 end
 
+local function DumpTree2(table_raw, n)
+    if not table_raw then
+        print("nil")
+        return
+    end
+    if not n then
+        n = 1
+    end
+    local function showTB(table, deepth, max_deepth)
+        if deepth > n or deepth > max_deepth then
+            return
+        end
+        local str_blank = ""
+        for i = 1, deepth - 1 do
+            str_blank = str_blank .. "  "
+        end
+        print(string.format("%s[value] = %s", str_blank, (table.value.GetExpression())))
+
+        if table.left then
+            print(string.format("%s[left] = ", str_blank))
+            showTB(table.left, deepth + 1, max_deepth)
+        end
+
+        if table.right then
+            print(string.format("%s[right] = ", str_blank))
+            showTB(table.right, deepth + 1, max_deepth)
+        end
+    end
+    showTB(table_raw, 1, n)
+end
+
 if arg[0] == "synax_parse.lua" then
     local lex = require("lex_analysis")
     local parser = lex.GetLexParser("lex_rule.lua")
-    local token_pool = parser("x+2+3")
+    local token_pool = parser("x*2+3*x")
+    for i, token in ipairs(token_pool.GetAll()) do
+        print(i, token.GetExpression(), token.GetType())
+    end
     local tree = ParseSubExp(token_pool)
     print(DumpTree(tree))
+    print(DumpTree2(tree, 7))
 end
 
 

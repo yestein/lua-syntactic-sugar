@@ -20,27 +20,35 @@ local function cdr(element)
     return element[2]
 end
 
+local function cadr(element)
+    return car(cdr(element))
+end
+
+local function caddr(element)
+    return car(cdr(cdr(element)))
+end
+
 local function cons(element_a, element_b)
     return {element_a, element_b}
 end
 
 local function scm_type(element)
-    if tonumber(element) then
-        return "num"
-    end
-    if type(element) == "table" and element.__is_symbol then
-        local symbol = element
-        if tonumber(symbol()) then
-            return "num"
+    if type(element) == "table" then
+        if element.__is_symbol then
+            local symbol = element
+            if tonumber(symbol()) then
+                return "num"
+            end
+            if symbol.__function then
+                return "op"
+            end
+            return "var"
+        elseif car(element) then
+            return "pair"
         end
-        if symbol.__function then
-            return "op"
-        end
-        return "var"
+        goto Exit1
     end
-    if car(element) then
-        return "pair"
-    end
+::Exit1::
     return type(element)
 end
 
@@ -104,6 +112,7 @@ local function test()
     print(scm_type(1))
     print(scm_type(cons(1,2)))
     print(scm_type(symbol(3)))
+    print(dump(cons(1, 2)))
     print(dump(cons(cons(cons(11,23),cons(10, 11)), cons(3,4))))
     print(dump(list(list(symbol("+", function () end), symbol("x"),3), list(symbol("+", function () end),2,3))))
 end
@@ -115,6 +124,8 @@ end
 return {
     car = car,
     cdr = cdr,
+    cadr = cadr,
+    caddr = caddr,
     cons = cons,
     dump = dump,
     list = list,
